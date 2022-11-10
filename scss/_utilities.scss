@@ -1,0 +1,85 @@
+// Utility classes are the only classes that can include the
+// !important value
+
+@each $color, $hex in $thm-colors {
+  .bg-#{$color} {
+    background-color: $hex !important;
+  }
+
+  .txt-#{$color} {
+    color: $hex !important;
+  }
+
+  .bt-#{$color} {
+    @include transition(background-color, 0.2s);
+    background-color: $hex !important;
+    color: set-text-color($hex) !important;
+    &:hover {
+      background-color: darken($hex, 10%) !important;
+    }
+  }
+}
+
+// Font Size Utilities
+@each $size, $pixels in $thm-font-sizes {
+  .txt-#{$size} {
+    font-size: $pixels !important;
+  }
+}
+
+// Visibility Utilities
+.hide {
+  display: none !important;
+}
+@each $bp, $value in $thm-break-points {
+  .show-at-#{$bp} {
+    @include bp($value) {
+      display: block !important;
+    }
+  }
+
+  .hide-at-#{$bp} {
+    @include bp($value) {
+      display: none !important;
+    }
+  }
+}
+
+// Display utility classes
+
+.block {
+  display: block !important;
+}
+.inline-block {
+  display: inline-block !important;
+}
+.inline {
+  display: inline !important;
+}
+.none {
+  display: none !important;
+}
+
+// Text align utility classes
+
+.txt-center {
+  text-align: center;
+}
+.txt-left {
+  text-align: left;
+}
+.txt-right {
+  text-align: right;
+}
+
+// List style
+.roman-numerals {
+  list-style: lower-roman;
+}
+.icon-list {
+  list-style: none;
+  padding-left: 0.5rem;
+  & .icon-list__icon {
+    margin-right: 1rem;
+  }
+}

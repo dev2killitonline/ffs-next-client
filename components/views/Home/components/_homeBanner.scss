@@ -1,0 +1,186 @@
+.home-banner {
+  position: relative;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../../public/images/phone/6.webp");
+  // background-size: auto 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // overflow: hidden;
+  @include bp($thm-bp-smlmed) {
+    padding-bottom: 170px;
+  }
+  @include bp($thm-bp-med) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../../public/images/tablet/6.webp");
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+  }
+  @include bp($thm-bp-medlrg) {
+    min-height: calc(100vh - 60px);
+  }
+  @include bp($thm-bp-xlrg) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../../public/images/desktop/6.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+}
+.home-banner__rhombus-bar {
+  @include bp($thm-bp-smlmed) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+.home-banner__content {
+  @include flex(row, nowrap, center, center);
+  // min-height: calc(90vh - 60px);
+  // padding: $thm-base-padding;
+  // padding: 1.5rem;
+  @include bp($thm-bp-smlmed) {
+    padding: 3rem;
+  }
+  @include bp($thm-bp-med) {
+    // min-height: calc(85vh - 60px);
+    padding: 3rem;
+  }
+  @include bp($thm-bp-medlrg) {
+    min-height: calc(100vh - 230px);
+  }
+}
+.home-banner__action-group {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  @include bp($thm-bp-smlmed) {
+    display: block;
+    height: auto;
+    // height: auto;
+  }
+}
+.home-banner__action {
+  position: relative;
+  z-index: $thm-z-float;
+  // max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.home-banner__action-title {
+  color: white !important;
+  font-size: $txt-3x-r;
+  // line-height: 106%;
+  letter-spacing: 2px;
+  text-align: left;
+  font-family: $thm-font-special;
+  margin: 0;
+  margin-top: 1rem;
+  // line-height: 130%;
+  // padding: 0 2rem;
+
+  @include bp($thm-bp-smlmed) {
+    font-size: $thm-font-xult;
+  }
+  @include bp($thm-bp-med) {
+    font-size: $thm-font-xult;
+  }
+  @include bp($thm-bp-lrg) {
+    font-size: $thm-font-xxult;
+    // font-size: $thm-font-xxxult;
+    // max-width: 600px;
+  }
+}
+
+.action-title__disaster {
+  animation: wordfade 3000ms linear infinite;
+  font-style: italic;
+  font-weight: 100;
+  font-size: $thm-font-xult;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.home-banner__rating-action {
+  min-width: 300px;
+  @include flex(column, nowrap);
+  @include bp($thm-bp-smlmed) {
+    margin-bottom: 4rem;
+  }
+  @include bp($thm-bp-xlrg) {
+    margin-bottom: 0;
+  }
+  &__rating {
+    font-size: $thm-font-lrg;
+    color: white;
+    font-family: $thm-font-special;
+    margin-bottom: 0.5rem;
+    // text-align: center;
+    // margin: $thm-base-padding;
+    // margin-top: 3rem;
+  }
+  &__services {
+    font-size: $thm-font-lrg;
+    display: block;
+  }
+  &__button {
+    @include transition;
+    color: white;
+    padding: $thm-base-padding;
+    width: 100%;
+    font-weight: 700;
+    border: none;
+    box-shadow: $thm-bs-2;
+    background-color: $thm-burg;
+    font-size: $thm-font-med;
+    cursor: pointer;
+    max-width: 300px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+    margin-bottom: 0.5rem;
+    &:hover {
+      background-color: darken($thm-burg, 10%);
+    }
+
+    @include bp($thm-bp-lrg) {
+      max-width: 400px;
+      padding: 1.25rem;
+      font-size: $thm-font-lrg;
+    }
+  }
+}
+.home-banner__list {
+  text-align: left;
+  list-style: none;
+  color: white;
+  padding-left: 0;
+  padding-bottom: 1rem;
+  font-size: $thm-font-sml;
+  @include bp($thm-bp-sml) {
+    font-size: $thm-font-med;
+  }
+}
+.home-banner__list li {
+  padding-bottom: 5px;
+}
+.home-banner__sub-btn-text {
+  color: white;
+  text-align: center;
+  font-size: $thm-font-sml;
+  font-style: italic;
+  margin-top: 0;
+  max-width: 300px;
+  @include bp($thm-bp-lrg) {
+    max-width: 400px;
+    font-size: $thm-font-med;
+  }
+}

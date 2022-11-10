@@ -1,0 +1,40 @@
+.call-now-ribbon {
+  background-color: $thm-burg;
+  box-shadow: $thm-bs-1;
+  // padding: 1rem;
+}
+.call-now-ribbon .btn {
+  display: inline-block;
+  // font-size: $thm-font-lrg;
+  white-space: nowrap;
+  font-weight: bold;
+  // margin-left: 1rem;
+}
+.call-now-ribbon__content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  @include flex(row, nowrap, space-between, center);
+  @include bp($thm-bp-smlmed) {
+    padding: 1rem 1.5rem;
+  }
+}
+.call-now-ribbon__text {
+  color: $thm-white;
+  font-family: $thm-font-special;
+  display: block;
+  max-width: 700px;
+  font-size: $thm-font-medlrg;
+  &.full__content {
+    display: none;
+  }
+  @include bp($thm-bp-smlmed) {
+    line-height: $thm-content-line-height;
+    &.partial__content {
+      display: none !important;
+    }
+    &.full__content {
+      display: block !important;
+    }
+  }
+}

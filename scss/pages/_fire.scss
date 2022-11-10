@@ -1,0 +1,22 @@
+.fire {
+  position: relative;
+  min-height: calc(100vh - 60px);
+}
+
+.fire__container {
+  max-width: 900px;
+  margin: 0 1rem;
+
+  @include bp($thm-bp-medlrg) {
+    margin: 0 auto;
+  }
+}
+
+.fire-risks__group {
+  flex-grow: 1;
+}
+
+.fire-risks__group-image {
+  max-width: 500px;
+  margin: 0 auto;
+}

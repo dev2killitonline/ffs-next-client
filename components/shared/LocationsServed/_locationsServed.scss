@@ -1,0 +1,23 @@
+.location__container {
+  @include bp($thm-bp-smlmed) {
+    // @include flex(row, nowrap, flex-start, flex-start);
+  }
+}
+.location__list {
+  font-size: $thm-font-lrg;
+  // padding: 0;
+  margin: 0;
+  @include bp($thm-bp-smlmed) {
+    font-size: $thm-font-xlrg;
+    @include flex(row, wrap);
+    &:not(:first-of-type) {
+      margin-left: 1rem;
+    }
+    li:not(:last-of-type) {
+      margin-right: 3rem;
+    }
+  }
+}
+.location__text {
+  font-weight: bold;
+}

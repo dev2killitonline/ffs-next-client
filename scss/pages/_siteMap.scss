@@ -1,0 +1,33 @@
+.sitemap {
+    position: relative;
+    min-height: calc(100vh - 60px);
+}
+
+.sitemap__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $thm-base-padding;
+}
+
+// This is a placeholder selector 
+// in other words it is a blueprint
+// other classes can use
+%sitemap__link {
+    font-size: $thm-font-medlrg;
+    color: $thm-primary;
+    display: block;
+    padding: .5rem;
+}
+
+.sitemap__link--parent {
+    @extend %sitemap__link;
+    font-weight: bold;
+}
+.sitemap__link--child {
+    @extend %sitemap__link;
+    margin-left: 2rem;
+}
+.sitemap__link--grand-child {
+    @extend %sitemap__link;
+    margin-left: 1rem;
+}

@@ -1,0 +1,74 @@
+.ourteam-comp {
+    padding: $thm-base-padding;
+    h2 {
+        font-size: $thm-font-xlrg;
+        line-height: 130%;
+        margin: $thm-base-margin auto;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.team-bio {
+    padding: 1rem;
+    // box-shadow: $thm-bs-1;
+    // background-color: $thm-light;
+    &:not(:last-child) {
+        margin-bottom: $thm-base-margin;
+    }
+    p {
+        line-height: $thm-content-line-height;
+    }
+    @include bp($thm-bp-sml){
+     @include flex(row, nowrap);
+    }
+    
+}
+
+.team-bio__wrapper {
+max-width: 400px;
+width: 100%;
+max-height: 400px;
+overflow: hidden;
+@include bp($thm-bp-sml){
+    max-height: 200px;
+    max-width: 200px;
+    min-width: 200px;
+}
+
+}
+
+.team-bio__image {
+  display: block;
+  width: 100%;
+}
+
+.team-bio__content {
+    @include bp($thm-bp-sml){
+        padding-left: $thm-base-padding
+    }
+
+    .team-bio__biocontent {
+        font-size: $thm-font-sml;
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.team-bio__name {
+    margin-bottom: 0;
+    @include bp($thm-bp-sml) {
+        margin-top: 0;
+        line-height: 100%;
+    }
+}
+.team-bio__title {
+    margin-top: 0;
+    font-size: $thm-font-tiny;
+    font-style: italic;
+}

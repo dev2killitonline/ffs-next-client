@@ -1,0 +1,14 @@
+.ice-dam {
+    position: relative;
+    min-height: calc(100vh - 60px);
+}
+
+.ice-dam__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ice-dam--iicrc {
+    max-width: 150px;
+    margin-right: 1rem;
+}

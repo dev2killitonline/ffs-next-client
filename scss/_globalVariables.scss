@@ -1,0 +1,231 @@
+/**
+* Global variabls contain information
+* related styling of the application
+*/
+
+/**
+* Table of contents:
+*
+* 1. colors
+*
+* 2. fonts
+*
+* 3. Breakpoints
+*
+* 4. Grid Variables
+*
+* 5. Spacing
+*
+* 6. Z-Index
+*
+* 7. Box Shadow
+*
+* 8. Buttons
+*
+* 9. Footer
+*
+* 10. Border Radius
+*
+* 11. Nav
+*/
+
+// 1. color
+
+$thm-teal: #1c4688;
+$thm-burg: #74111d;
+
+// theme 2
+// $thm-primary: #175676;
+// $thm-secondary: #BA324F;
+// call to action color
+// $thm-action-call: #4BA3C3;
+
+// theme 3
+// $thm-primary: #23395B;
+// $thm-secondary: #FFFD98;
+// call to action color
+// $thm-action-call: $thm-primary;
+
+// theme 4
+// $thm-primary: $thm-burg;
+// $thm-secondary: $thm-teal;
+// call to action color
+// $thm-action-call: #d32121;
+
+// disaster colors
+
+$thm-fire: #ffb800;
+$thm-flood: #1be7ff;
+$thm-mold: #6eeb83;
+$thm-disaster: #e8c547;
+
+// neutral colors
+
+$thm-white: #f9fafb;
+$thm-light: #f3f6f8;
+$thm-light-grey: #e3e6e6;
+$thm-grey: rgba(46, 46, 46, 0.6);
+$thm-dark: #2e2e2e;
+$thm-black: #040404;
+$thm-transparent: transparent;
+
+$thm-v2-dark-grey: #2e2e2e;
+$thm-v2-grey: lighten($thm-v2-dark-grey, 40);
+$thm-v2-light-grey: #f3f3f3;
+
+// alert colors
+$thm-info: #1982c4;
+$thm-success: #95c623;
+$thm-caution: #ffca3a;
+$thm-warning: #d72638;
+
+// social media colors
+$facebook: #1c4688;
+$youtube: #1c4688;
+$instagram: #1c4688;
+
+// color map
+
+// theme 1
+$thm-primary: $thm-v2-dark-grey;
+// $thm-secondary: #00a4e4;
+$thm-secondary: #022b53;
+// $thm-secondary: #0078A6;
+// $thm-secondary: #006992;
+// call to action color
+// $thm-action-call: #d32121;
+$thm-action-call: $thm-secondary;
+
+$thm-colors: (
+  "primary": $thm-primary,
+  "secondary": $thm-secondary,
+  "teal": $thm-teal,
+  "burg": $thm-burg,
+  "white": $thm-white,
+  "light": $thm-light,
+  "grey": $thm-grey,
+  "dark": $thm-dark,
+  "black": $thm-black,
+  "info": $thm-info,
+  "success": $thm-success,
+  "caution": $thm-caution,
+  "warning": $thm-warning,
+  "action-call": $thm-action-call,
+  "transparent": $thm-transparent,
+  "facebook": $facebook,
+  "youtube": $youtube,
+  "instagram": $instagram,
+);
+
+// 2. Fonts
+
+$thm-font-primary: "Open Sans", sans-serif;
+$thm-font-special: "Spartan", sans-serif;
+
+// Content Line Height
+$thm-content-line-height: 180%;
+
+// Font Size
+$thm-font-tiny: 12px;
+$thm-font-sml: 14px;
+$thm-font-med: 16px;
+$thm-font-medlrg: 18px;
+$thm-font-mod: 22px;
+$thm-font-lrg: 24px;
+$thm-font-xlrg: 28px;
+$thm-font-ult: 32px;
+$thm-font-xult: 40px;
+$thm-font-xxult: 55px;
+$thm-font-xxxult: 66px;
+
+$txt-xs-r: 0.75rem;
+$txt-sm-r: 0.875rem;
+$txt-md-r: 1rem;
+$txt-lg-r: 1.125rem;
+$txt-xl-r: 1.25rem;
+$txt-2x-r: 1.5rem;
+$txt-3x-r: 1.875rem;
+$txt-4x-r: 2.25rem;
+
+// Font Size Map
+$thm-font-sizes: (
+  "tiny": $thm-font-tiny,
+  "sml": $thm-font-sml,
+  "med": $thm-font-med,
+  "medlrg": $thm-font-medlrg,
+  "lrg": $thm-font-lrg,
+  "xlrg": $thm-font-xlrg,
+  "ult": $thm-font-ult,
+  "xult": $thm-font-ult,
+);
+
+// 3. Breakpoints (subject to change)
+
+$thm-bp-tiny: 350px;
+$thm-bp-tinysml: 450px;
+$thm-bp-sml: 600px;
+$thm-bp-smlmed: 650px;
+$thm-bp-med: 800px;
+$thm-bp-medlrg: 900px;
+$thm-bp-lrg: 1024px;
+$thm-bp-lrgxlg: 1200px;
+$thm-bp-xlrg: 1280px;
+$thm-bp-ult: 1440px;
+
+// breakpoint map
+$thm-break-points: (
+  "tiny": $thm-bp-tiny,
+  "sml": $thm-bp-sml,
+  "smlmed": $thm-bp-smlmed,
+  "med": $thm-bp-med,
+  "medlrg": $thm-bp-medlrg,
+  "lrg": $thm-bp-lrg,
+  "xlrg": $thm-bp-xlrg,
+  "ult": $thm-bp-ult,
+);
+
+// 4. Grid Variables
+
+$grid-columns: 12;
+$grid-gutter: 1rem;
+$grid-column-height: 40px;
+
+// 5. Spacing
+
+$thm-base-padding: 1rem;
+$thm-base-margin: 1rem;
+
+// 6. Z-index
+
+$thm-z-floor: 0;
+$thm-z-float: 10;
+$thm-z-alert: 80;
+$thm-z-ceiling: 100;
+
+// 7. Box Shadow
+$thm-bs-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$thm-bs-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$thm-bs-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+// 8. Buttons
+$thm-btn-padding: 0.65rem 1rem;
+$thm-btn-margin: 0.5rem;
+$thm-btn-font: $thm-font-primary;
+$thm-btn-font-size: 16px;
+$thm-btn-font-color: black;
+$thm-btn-font-weight: 500;
+$thm-btn-border-radius: 0px;
+$thm-btn-types: "round" "fluid" "square";
+
+// 9. Footer
+$footer-title-color: $thm-light;
+$footer-bg-color: $thm-dark;
+$footer-list-title-color: $thm-white;
+
+// 10. Border Radius
+$thm-base-border-radius: 15px;
+
+// 11. Nav
+$nav-background-color: $thm-white;
+$nav-link-color: $thm-dark;
+$nav-link-border-color: $thm-black;

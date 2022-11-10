@@ -1,0 +1,11 @@
+.image--figure {
+    margin: 0 auto;
+    max-width: 600px;
+    min-width: 300px;
+    overflow: hidden;
+}
+.image__caption--figure {
+    font-size: $thm-font-sml;
+    font-style: italic;
+    text-align: center;
+}

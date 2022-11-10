@@ -1,0 +1,145 @@
+// This file specifies a container
+// that elegantly styles text and
+// media elements
+
+.format-text,
+.format-blog {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: $thm-base-padding;
+  line-height: $thm-content-line-height;
+  h1 {
+    font-size: $thm-font-mod;
+    line-height: 130%;
+    margin: $thm-base-margin auto;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include bp($thm-bp-med) {
+      font-size: $thm-font-xlrg;
+    }
+  }
+  h2 {
+    font-size: $thm-font-medlrg;
+    line-height: 130%;
+    margin: $thm-base-margin auto;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include bp($thm-bp-med) {
+      font-size: $thm-font-lrg;
+    }
+  }
+  h3 {
+    font-size: $thm-font-med;
+    line-height: 130%;
+    margin: $thm-base-margin auto;
+    color: $thm-v2-dark-grey;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include bp($thm-bp-med) {
+      font-size: $thm-font-medlrg;
+    }
+  }
+  h4 {
+    font-size: $thm-font-med;
+    line-height: 130%;
+  }
+  h5 {
+    font-size: $thm-font-med;
+  }
+  h6 {
+    font-size: $thm-font-med;
+  }
+  p {
+    font-size: $thm-font-med;
+  }
+  // ul, li {}
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 2rem auto;
+  }
+}
+
+.format-blog {
+  max-width: 680px;
+  //   margin: 0 auto;
+  padding: 0 1.5rem;
+  @include bp($thm-bp-med) {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: $txt-xl-r !important;
+    @include bp($thm-bp-med) {
+      font-size: $txt-2x-r !important;
+    }
+  }
+  h2 {
+    font-size: $txt-lg-r !important;
+    color: $thm-grey;
+    @include bp($thm-bp-med) {
+      font-size: $txt-xl-r !important;
+    }
+  }
+  h3 {
+    font-size: $txt-md-r !important;
+    font-family: $thm-font-primary;
+    @include bp($thm-bp-med) {
+      font-size: $txt-lg-r !important;
+    }
+  }
+  h4 {
+    font-size: $txt-md-r !important;
+    font-family: $thm-font-primary;
+    // @include bp($thm-bp-med) {
+    //   font-size: $txt-2x-r;
+    // }
+  }
+
+  //   h4 {
+  //     font-size: $thm-font-medlrg;
+  //     line-height: 130%;
+  //   }
+  //   h5 {
+  //     font-size: $thm-font-medlrg;
+  //   }
+  //   h6 {
+  //     font-size: $thm-font-medlrg;
+  //   }
+  //   p {
+  //     line-height: 120%;
+  //     font-size: $thm-font-medlrg;
+  //     @include bp($thm-bp-med) {
+  //       line-height: $thm-content-line-height;
+  //     }
+  //   }
+  //   img {
+  //     box-shadow: $thm-bs-1;
+  //   }
+  figure {
+    margin: 0;
+  }
+}
+
+.cert-badge {
+  padding: 1rem;
+  font-size: $thm-font-sml;
+  display: inline-flex;
+  // border-radius: 4px;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $thm-light;
+  margin: 0;
+  max-width: 600px;
+  box-shadow: $thm-bs-1;
+}
+
+.cert-icon {
+  margin-right: $thm-base-margin;
+  font-size: 40px;
+  color: $thm-caution;
+}

@@ -1,0 +1,76 @@
+@use "sass:math";
+
+@mixin Grid($columns: $grid-columns, $gutter: $grid-gutter) {
+	display: flex;
+	flex-flow: row wrap;
+	&.gutter {
+		margin: math.div(-$gutter , 2);
+		&.gutter--full {
+			margin: 0;
+		}
+		& .col {
+			flex-grow: 1;
+			min-height: $grid-column-height;
+			margin: math.div($gutter, 2);
+
+			@for $i from 1 through $columns {
+				&--#{$i}{
+					flex-grow: 0;
+					min-height: $grid-column-height;
+					margin: math.div($gutter, 2);
+					width: calc(#{math.div($i, $columns) * 100%} - #{$gutter});
+				}
+			}	
+			@each $size, $value in $thm-break-points {
+				&--#{$size} {
+					@include bp($value) {
+						@for $j from 1 through $columns {
+							&--#{$j} {
+								width: calc(#{math.div($j, $columns) * 100%} - #{$gutter});
+								flex-grow: 0;
+								margin: math.div($gutter, 2);
+								min-height: $grid-column-height;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	& .row {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	
+	& .col {
+		flex-grow: 1;
+		min-height: $grid-column-height;
+		
+		@for $i from 1 through $columns {
+			&--#{$i}{
+				flex-grow: 0;
+				min-height: $grid-column-height;
+				width: calc(#{math.div($i, $columns) * 100%});
+			}
+		}
+	
+		@each $size, $value in $thm-break-points {
+			&--#{$size} {
+				@include bp($value) {
+					@for $j from 1 through $columns {
+						&--#{$j} {
+							width: calc(#{math.div($j, $columns) * 100%});
+							flex-grow: 0;
+							min-height: $grid-column-height;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.grid {
+	@include Grid;
+}

@@ -1,0 +1,53 @@
+.home {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  // overflow: hidden;
+}
+
+.home__body {
+  max-width: 900px;
+  margin: 0 auto !important;
+}
+
+// shared styles
+.home-about__title,
+.home-reviews__title {
+  font-size: $thm-font-xlrg;
+  max-width: 900px;
+  margin: $thm-base-margin auto;
+  text-align: left;
+  @include bp($thm-bp-sml) {
+    text-align: left;
+  }
+}
+
+.home-reviews {
+  z-index: $thm-z-float;
+}
+.home-review__content {
+  padding: 1rem;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}

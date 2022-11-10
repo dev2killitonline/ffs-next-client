@@ -1,0 +1,40 @@
+.biohazards {
+  position: relative;
+  min-height: calc(100vh - 60px);
+}
+
+.biohazard__container {
+  max-width: 900px;
+  margin: 0 1rem;
+
+  @include bp($thm-bp-medlrg) {
+    margin: 0 auto;
+  }
+}
+
+.sectionComp__container {
+  @include flex(column, nowrap, center, space-between);
+  @include bp($thm-bp-medlrg) {
+    @include flex(row, nowrap, center, space-between);
+  }
+}
+
+.sectionComp__container p {
+  margin: 0;
+  line-height: 180%;
+}
+
+.sectionComp__image-container {
+  margin-top: 20px;
+  overflow: hidden;
+
+  @include bp($thm-bp-medlrg) {
+    margin-top: 0;
+    margin-left: 20px;
+    min-width: 250px;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+}

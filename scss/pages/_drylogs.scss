@@ -1,0 +1,103 @@
+.drylogs {
+  padding: $thm-base-padding;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.drylogs__table {
+  padding: $thm-base-padding;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include print {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.hide-when-printing {
+  @include print {
+    display: none;
+  }
+}
+
+.drylogs__header__info {
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.drylog__floor {
+  background-color: $thm-light-grey;
+}
+
+.drylog__form {
+  margin-top: $thm-base-margin;
+  input,
+  select {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 1rem;
+  }
+}
+
+.drylog__loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($thm-dark, 0.5);
+  z-index: 300;
+  @include flex(row, nowrap, center, center);
+}
+.drylog__loading__icon {
+  font-size: 80px;
+  color: $thm-white;
+  animation: 2s linear infinite rotate;
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.form__field {
+  margin-bottom: $thm-base-margin;
+}
+
+.input__group {
+}
+
+// Actually a label
+.form-input {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  display: block;
+}
+
+.form-drylog-input {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.form-stacked__label {
+  @include flex(column, nowrap);
+  margin-bottom: 0.5rem;
+}
+
+.mp-green {
+  background-color: #90ee90;
+}
+.mp-yellow {
+  background-color: #fffd7f;
+}
+.mp-red {
+  background-color: #f79696;
+}

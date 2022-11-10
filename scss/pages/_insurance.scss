@@ -1,0 +1,72 @@
+.insurance {
+  position: relative;
+  min-height: calc(100vh - 60px);
+}
+
+.insurance-heading__container {
+  @include flex(column, nowrap, center, center);
+  @include bp($thm-bp-medlrg) {
+    @include flex(row, nowrap, space-between, flex-start);
+  }
+}
+
+.insurance-intro__paragraph {
+  @include bp($thm-bp-medlrg) {
+    width: 45%;
+    margin: 0;
+  }
+  margin-bottom: 15px;
+}
+
+.insurance-intro__video {
+  width: 100%;
+  height: 300px;
+  @include bp($thm-bp-medlrg) {
+    width: 50%;
+  }
+}
+
+.insurance-step-title {
+  color: $thm-burg;
+}
+
+.insurance-banner {
+  padding: $thm-base-padding;
+  min-height: 50vh;
+  // background-color: $thm-grey;
+  box-shadow: $thm-bs-1;
+  // background: linear-gradient(45deg, rgba($thm-grey, .4), rgba($thm-grey, .4)), url(https://images.pexels.com/photos/1179804/pexels-photo-1179804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-position: middle;
+  background-size: cover;
+}
+.insurance-banner__content {
+  @include flex(column, nowrap, center, center);
+  h1 {
+    font-size: $thm-font-ult;
+    margin-bottom: 0;
+    // color: $thm-dark;
+    color: $thm-black;
+  }
+  h2 {
+    font-size: $thm-font-medlrg;
+    // color: $thm-dark;
+    color: $thm-black;
+  }
+}
+.insurance-banner__image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.insurance-banner__image-container {
+  @include flex(row, nowrap, center, center);
+  height: 200px;
+  margin: $thm-base-margin 0;
+}
+
+.insurance-image {
+  min-width: 100% !important;
+  box-shadow: $thm-bs-1;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

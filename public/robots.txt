@@ -1,0 +1,5 @@
+# Allowing robots to crawl the entire website
+User-agent: *
+Allow: /
+
+sitemap: https://www.floodandfiresolutions.com/sitemap.xml

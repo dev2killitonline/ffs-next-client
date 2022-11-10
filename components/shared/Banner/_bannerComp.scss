@@ -1,0 +1,178 @@
+.banner--flood {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../public/images/phone/2_extra_small.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  @include bp($thm-bp-med) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/tablet/2.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  @include bp($thm-bp-xlrg) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/desktop/2.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+.banner--fire {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../public/images/phone/3_extra_small.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  @include bp($thm-bp-med) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/tablet/3.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  @include bp($thm-bp-xlrg) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/desktop/3.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+.banner--mold {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../public/images/phone/4_extra_small.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  @include bp($thm-bp-med) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/tablet/4.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  @include bp($thm-bp-xlrg) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/desktop/4.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+.banner--biohazard {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../public/images/phone/5.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include bp($thm-bp-med) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/tablet/5.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  @include bp($thm-bp-xlrg) {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../public/images/desktop/5.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+.banner-comp {
+  @include flex(row, nowrap, center, center);
+  padding: $thm-base-padding;
+  position: relative;
+  height: calc(80vh - 60px);
+  background-color: $thm-dark;
+  background-size: cover;
+  overflow: hidden;
+  h1 {
+    font-size: $thm-font-ult;
+    color: $thm-light;
+    text-transform: capitalize;
+    @include bp($thm-bp-smlmed) {
+      font-size: $thm-font-xult;
+      margin-bottom: 1rem;
+    }
+    @include bp($thm-bp-med) {
+      font-size: $thm-font-xxult;
+    }
+  }
+  h2 {
+    font-size: $thm-font-medlrg;
+    color: $thm-white;
+    @include bp($thm-bp-med) {
+      font-size: $thm-font-lrg;
+    }
+  }
+  a {
+    font-size: $thm-font-medlrg;
+  }
+}
+
+.banner-comp__video-gradient {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $thm-z-float;
+  background: linear-gradient(
+    45deg,
+    rgba($thm-dark, 0.6),
+    rgba($thm-dark, 0.6)
+  );
+}
+.banner-comp__video {
+  @include flex(row, nowrap, center, center);
+  position: absolute;
+  left: -200px;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+  @include bp($thm-bp-sml) {
+    left: 0;
+  }
+}
+
+.banner-comp__content {
+  position: relative;
+  z-index: $thm-z-float;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+@keyframes zoom {
+  0%,
+  100% {
+    background-position: top;
+  }
+  25%,
+  75% {
+    background-position: middle;
+  }
+  50% {
+    background-position: bottom;
+  }
+}

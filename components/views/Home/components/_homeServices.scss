@@ -1,0 +1,245 @@
+.home-services {
+    padding: 1rem;
+    background-color: $thm-light;
+}
+
+.home-services__title {
+    flex-grow: 1;
+    font-size: $thm-font-xlrg;
+    max-width: 900px;
+    margin: $thm-base-margin 0;
+    width: 100%;
+    text-align: left;
+
+    @include bp($thm-bp-med) {
+        text-align: left;
+        padding: 0 1rem;
+    }
+}
+
+.home-services__container {
+    @include flex(column, nowrap, flex-start, center);
+    max-width: 900px;
+    margin: 0 auto;
+
+    @include bp($thm-bp-smlmed) {
+        @include flex(row, wrap, center, flex-start);
+    }
+}
+
+.home-services__section {
+    @include flex(row, nowrap, center, center);
+    // display: block;
+    box-shadow: $thm-bs-1;
+    background-color: $thm-white;
+    padding: 1rem;
+    text-decoration: none;
+    color: $thm-dark;
+    margin: $thm-base-margin 0;
+    width: 300px;
+    height: 300px;
+
+    @include bp($thm-bp-sml) {
+        margin: $thm-base-margin
+    }
+
+    @include bp($thm-bp-medlrg) {
+        // display: block;
+        min-width: 250px;
+        max-width: 250px;
+        // height: 350px;
+        height: 250px;
+    }
+}
+
+.home-services__section-title {
+    // color: $thm-primary;
+    @include transition;
+    color: $thm-light;
+    text-align: center;
+    font-size: $thm-font-ult;
+    text-shadow: 2px 2px 4px #000000;
+
+    @include bp($thm-bp-sml) {
+        text-align: left;
+    }
+
+    @include bp($thm-bp-medlrg) {
+        text-align: center;
+    }
+}
+
+.home-services__content {
+    flex-grow: 3;
+
+    @include bp($thm-bp-smlmed) {
+        flex-grow: 1;
+    }
+}
+
+.home-services__icon {
+    display: block;
+    font-size: 100px;
+    color: $thm-black;
+    text-align: center;
+
+    @include bp($thm-bp-sml) {
+        font-size: 75px;
+        text-align: center;
+        flex-grow: 1;
+        width: 100px;
+    }
+
+    @include bp($thm-bp-med) {
+        width: auto;
+    }
+}
+
+.home-services__icon {
+    &.mold__icon {
+        color: $thm-black;
+    }
+
+    &.flood__icon {
+        color: $thm-black;
+    }
+
+    &.fire__icon {
+        color: $thm-action-call;
+    }
+
+    &.disaster__icon {
+        color: $thm-black;
+    }
+}
+
+.home-services__list {
+    font-size: $thm-font-med;
+    list-style: none;
+    padding: 0;
+
+    @include bp($thm-bp-sml) {
+        padding: 1rem;
+    }
+
+    @include bp($thm-bp-med) {
+        padding: 0;
+    }
+
+    @include bp($thm-bp-medlrg) {
+        padding: 1rem;
+    }
+
+    li {
+        margin-bottom: .5rem;
+    }
+}
+
+.home-services__item-icon {
+    margin-right: 10px;
+    font-size: $thm-font-medlrg;
+    color: $thm-primary
+}
+
+.water-service__background {
+    @include transition;
+    background: linear-gradient(45deg, rgba($thm-black, .3), rgba($thm-black, .3)), url(https://images.unsplash.com/photo-1498462440456-0dba182e775b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        box-shadow: $thm-bs-3;
+
+        .home-services__section-title {
+            color: #999;        
+        }
+    }
+}
+
+.ice-dam-service__background {
+    @include transition;
+    background: linear-gradient(45deg, rgba($thm-black, .3), rgba($thm-black, .3)), url("/images/ice-dam.png");
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        box-shadow: $thm-bs-3;
+
+        .home-services__section-title {
+            color: #bbb;        
+        }
+    }
+}
+
+.fire-service__background {
+    @include transition;
+    background: linear-gradient(45deg, rgba($thm-black, .3), rgba($thm-black, .3)), url(https://images.unsplash.com/photo-1543005472-1b1d37fa4eae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        box-shadow: $thm-bs-3;
+
+        .home-services__section-title {
+            color: #bbb;        
+        }
+    }
+}
+
+.mold-service__background {
+    @include transition;
+    background: linear-gradient(45deg, rgba($thm-black, .3), rgba($thm-black, .3)), url(https://images.unsplash.com/photo-1562898553-19b9b1263dcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=560&q=80);
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        box-shadow: $thm-bs-3;
+
+        .home-services__section-title {
+            color: #bbb;        }
+    }
+}
+
+.bio-service__background {
+    @include transition;
+    // background: linear-gradient(45deg, rgba($thm-black, .7), rgba($thm-black, .7)), url(https://images.unsplash.com/photo-1523293915678-d126868e96f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        box-shadow: $thm-bs-3;
+
+        .home-services__section-title {
+            color: #bbb;        }
+
+    }
+}
+
+.bugs-service__background {
+    @include transition;
+    background: linear-gradient(45deg, rgba($thm-black, .3), rgba($thm-black, .3)), url(https://images.unsplash.com/photo-1526880792616-4217886b9dc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        box-shadow: $thm-bs-3;
+
+        .home-services__section-title {
+            color: #bbb;        }
+    
+    }
+}
+
+.animal-service__background {
+    @include transition;
+    background: linear-gradient(45deg, rgba($thm-black, .3), rgba($thm-black, .3)), url(https://images.unsplash.com/photo-1535092385070-a4a66c66a52e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-position: top;
+    background-size: cover;
+
+    &:hover {
+        box-shadow: $thm-bs-3;
+
+        .home-services__section-title {
+            color: #bbb;        }
+    }
+}

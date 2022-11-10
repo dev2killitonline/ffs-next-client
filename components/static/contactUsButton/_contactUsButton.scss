@@ -1,0 +1,73 @@
+.contact-us-button {
+  @include flex(row, nowrap, center, center);
+  z-index: $thm-z-alert;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 65px;
+  width: 65px;
+  background-color: $thm-burg;
+  border-radius: 50%;
+  @include bp($thm-bp-med) {
+    display: none;
+  }
+}
+
+// .contact-us-button__toggle {
+// border-radius: 50%;
+// height: 45px;
+// width: 45px;
+// }
+
+.contact-us-button__icon {
+  @include flex(row, nowrap, center, center);
+  width: 38px;
+  height: 38px;
+}
+
+.call-button {
+  background-color: #d32121;
+  // background-color: $thm-burg;
+  border-radius: 50px;
+  &__icon {
+    color: $thm-light;
+  }
+}
+
+.box-shadow {
+  box-shadow: $thm-bs-2;
+}
+
+.contact-us-button-form {
+  display: none;
+}
+
+// .contact-us-button__open {
+//     animation: swing-open 200ms ease;
+// }
+
+// .contact-us-button__closed {
+//     animation: swing-closed 200ms ease;
+//     visibility: hidden;
+// }
+
+@keyframes swing-open {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes swing-closed {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,102 @@
+.home-reviews__btn {
+  position: absolute;
+  bottom: 70px;
+  padding: 2rem 1rem;
+  width: 50%;
+  height: 70%;
+  // background-color: rgba($thm-black, 0.3);
+  background-color: transparent;
+  margin: 0;
+  &:first-child {
+    left: 0;
+  }
+  &:nth-child(2) {
+    right: 0;
+    @include flex(row, nowrap, flex-end, center);
+  }
+  @include bp($thm-bp-lrg) {
+    top: 20%;
+    bottom: 20%;
+    // bottom: auto;
+    &:first-child {
+      left: -80px;
+    }
+    &:nth-child(2) {
+      right: -80px;
+    }
+  }
+  // I should probably keep this in
+  // but removing temporarily
+  &:focus {
+    outline: none;
+  }
+}
+
+.home-reviews__btn-icon {
+  @include flex(row, nowrap, center, center);
+  height: 16px;
+  width: 16px;
+  &.make-left {
+    transform: rotate(180deg);
+  }
+}
+.home-reviews__btn-container {
+  @include flex(row, nowrap, space-between, center);
+}
+
+.home-review {
+  padding: $thm-base-padding;
+  margin: 0;
+}
+
+.home-review__avatar {
+  border-radius: 50px;
+  box-shadow: $thm-bs-1;
+}
+.home-review__name {
+  display: block;
+  font-size: $txt-lg-r;
+  margin: 1rem 0;
+  font-weight: bold;
+  margin-left: 2rem;
+  @include bp($thm-bp-medlrg) {
+    font-size: $txt-xl-r;
+  }
+}
+.home-review__rating {
+  margin-top: 0.25rem;
+  display: block;
+  color: $thm-caution;
+}
+
+.home-review__text {
+  // text-align: center;
+  text-align: left;
+  line-height: $thm-content-line-height;
+  font-size: $txt-md-r;
+  font-style: italic;
+  @include bp($thm-bp-medlrg) {
+    font-size: $txt-lg-r;
+  }
+}
+
+@keyframes review-fade-in {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+
+.home-reviews__container {
+  @include flex(row, nowrap, center, center);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  //   height: 450px;
+}
+
+.home-review__btn {
+  position: absolute;
+  bottom: 0;
+}

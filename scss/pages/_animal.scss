@@ -1,0 +1,35 @@
+.animal {
+    position: relative;
+    min-height: calc(100vh - 60px);
+}
+
+.animal__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.animal-cleanup {
+    padding: $thm-base-padding;
+}
+
+.animal-cleanup__section {
+    @include flex(row, wrap, center, center);
+    margin: 0 auto;
+    width: auto;
+    @include bp($thm-bp-sml) {
+        @include flex(row, wrap);
+    }
+}
+.animal-cleanup__item {
+    max-width: 250px;
+    margin: $thm-base-margin;
+}
+.animal-cleanup__img-container {
+    @include flex(row, nowrap, center, center);
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+}
+.animal-cleanup__img {
+    width: 400px;
+}

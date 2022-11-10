@@ -1,0 +1,130 @@
+.footer {
+  position: relative;
+  background-color: $footer-bg-color;
+  padding: $thm-base-padding;
+  padding-bottom: 100px;
+  @include bp($thm-bp-sml) {
+    padding-bottom: 80px;
+  }
+  @include print {
+    display: none;
+  }
+}
+.footer__title {
+  color: $footer-title-color;
+  font-size: $thm-font-lrg;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.footer__section-container {
+  margin: 0 auto;
+  max-width: 250px;
+  @include bp($thm-bp-tiny) {
+    max-width: 400px;
+  }
+  @include bp($thm-bp-sml) {
+    @include flex(row, wrap, space-around);
+    max-width: 740px;
+  }
+}
+.footer__section {
+  padding: $thm-base-padding;
+  @include bp($thm-bp-sml) {
+    width: 25%;
+  }
+}
+.footer__section--certifications {
+  padding: $thm-base-padding;
+  margin-left: -1rem;
+  background-color: $thm-light;
+  margin-right: -1rem;
+  width: calc(100% + 2rem);
+}
+.footer__list-title {
+  color: $footer-list-title-color;
+  font-size: $thm-font-lrg;
+  margin-bottom: 0;
+  padding-left: 1rem;
+  @include bp($thm-bp-sml) {
+    padding: 0;
+  }
+}
+.footer__list {
+  padding: 0;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.footer__list--certifications {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  @include flex(column, nowrap, center, center);
+  @include bp($thm-bp-sml) {
+    @include flex(row, nowrap, space-evenly, center);
+  }
+}
+
+// does not yet have any rules
+// .footer__item {}
+.footer__link {
+  @include transition;
+  display: block;
+  padding: 1rem;
+  color: $thm-white;
+  font-size: $thm-font-medlrg;
+  text-decoration: none;
+  &:visited {
+    color: lighten($thm-grey, 55%);
+  }
+  &:hover {
+    color: $thm-white;
+    background-color: rgba($thm-white, 0.2);
+  }
+
+  @include bp($thm-bp-sml) {
+    padding: 0.25rem;
+    font-size: $thm-font-med;
+  }
+}
+
+.footer__link-icon {
+  width: 25px;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+.footer__fine-print {
+  @include flex(row, wrap, center, center);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: $thm-secondary;
+  @include bp($thm-bp-sml) {
+    height: 80px;
+  }
+}
+.footer__fine-print-item {
+  color: $thm-light;
+}
+.footer__fine-print-seperator {
+  margin: 0 0.25rem;
+  color: $thm-grey;
+}
+
+.footer__item img {
+  //  width: 200px;
+  height: 100px;
+  margin-bottom: $thm-base-margin;
+  @include bp($thm-bp-sml) {
+    margin-bottom: 0;
+  }
+}

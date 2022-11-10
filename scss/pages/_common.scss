@@ -1,0 +1,8 @@
+.page__container {
+  max-width: 900px;
+  margin: 2rem 1rem;
+
+  @include bp($thm-bp-medlrg) {
+    margin: 2rem auto;
+  }
+}

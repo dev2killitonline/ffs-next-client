@@ -1,0 +1,47 @@
+@mixin btn-reset() {
+  // display
+  display: inline;
+  // height width margin padding
+  padding: $thm-btn-padding;
+  margin: $thm-btn-margin;
+  // border background color
+  border: none;
+  border-radius: $thm-btn-border-radius;
+  background-color: $thm-light;
+  // font text
+  text-decoration: none;
+  text-align: center;
+  font-family: $thm-btn-font;
+  font-size: $thm-btn-font-size;
+  color: $thm-btn-font-color;
+  font-weight: $thm-btn-font-weight;
+  // other
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@mixin btn-type($type: "default") {
+  @if $type == "round" {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  } @else if $type == "fluid" {
+    display: block;
+    width: 100%;
+    margin: $thm-btn-margin 0;
+  } @else {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@each $type in $thm-btn-types {
+  .btn--#{$type} {
+    @include btn-reset;
+    @include btn-type($type);
+  }
+}
+
+.btn {
+  @include btn-reset;
+}

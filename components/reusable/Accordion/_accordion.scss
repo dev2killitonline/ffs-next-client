@@ -1,0 +1,44 @@
+.accordion__container {
+}
+.accordion__drawer {
+  // border: 2px solid $thm-primary;
+  background-color: $thm-light-grey;
+}
+.accordion__drawer.open .accordion__title {
+  background-color: lighten($thm-v2-grey, 25);
+}
+.accordion__title {
+  @include transition(background-color, 200ms);
+  @include flex(row, nowrap);
+  box-shadow: $thm-bs-1;
+  background-color: $thm-v2-light-grey;
+  padding: 1rem;
+  margin: 0;
+
+  cursor: pointer;
+  &:hover {
+    background-color: lighten($thm-v2-grey, 25);
+  }
+  img {
+    height: 15px;
+    margin-right: 1rem;
+  }
+}
+.accordion__content {
+  @include transition;
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: $thm-bs-1;
+  &.open {
+    max-height: 800px;
+  }
+  p {
+    line-height: $thm-content-line-height;
+    padding: 1rem;
+    padding-top: 0;
+  }
+  p:not(:last-of-type) {
+    padding-bottom: 0;
+  }
+}

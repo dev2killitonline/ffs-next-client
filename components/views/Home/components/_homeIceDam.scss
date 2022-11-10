@@ -1,0 +1,21 @@
+.home-ice-dam__cont {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.home-ice-dam__h2 {
+    color: $thm-burg;
+}
+
+.home-ice-dam__img {
+    width: 100%;
+}
+
+.home-ice-dam__p {
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    line-height: 200%;
+    flex-grow: 1;
+}
